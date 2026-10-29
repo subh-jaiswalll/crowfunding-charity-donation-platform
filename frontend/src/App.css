@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f8f6;
+  color: #24352e;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card,
+.profile-card {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 24px rgba(0, 0, 0, 0.07);
+}
+
+.auth-card h1 {
+  color: #087f5b;
+  margin-bottom: 8px;
+}
+
+.auth-card p {
+  color: #66736c;
+}
+
+label {
+  display: block;
+  margin: 16px 0 7px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd8d1;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid #91d8bd;
+  border-color: #087f5b;
+}
+
+button {
+  border: none;
+  border-radius: 7px;
+  background: #087f5b;
+  color: white;
+  padding: 12px 18px;
+  margin-top: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #066747;
+}
+
+.auth-card button {
+  width: 100%;
+}
+
+a {
+  color: #087f5b;
+  font-weight: 600;
+}
+
+.profile-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.profile-header h1 {
+  color: #087f5b;
+}
+
+.profile-card {
+  max-width: none;
+  margin-bottom: 25px;
+}
+
+.profile-card h2 {
+  margin-top: 0;
+}
+
+.donation-item {
+  border: 1px solid #e0e9e3;
+  padding: 16px;
+  margin-top: 12px;
+  border-radius: 9px;
+}
+
+.donation-item h3 {
+  color: #087f5b;
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 15px;
+  }
+
+  .profile-header {
+    align-items: flex-start;
+  }
+
+  .profile-header h1 {
+    font-size: 22px;
+  }
+
+  .auth-card,
+  .profile-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,109 @@
+
+.admin-layout {
+  display: flex;
+  min-height: 85vh;
+  background: #f5faf7;
+}
+
+.admin-sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  padding: 25px 16px;
+  background: #064e3b;
+  color: white;
+}
+
+.admin-sidebar h2 {
+  margin: 0 0 30px;
+}
+
+.admin-sidebar button {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-sidebar button:hover,
+.admin-sidebar button.active {
+  background: #087f5b;
+}
+
+.admin-content {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+  overflow-x: auto;
+}
+
+.admin-content h1 {
+  color: #064e3b;
+}
+
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 13px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.admin-table th {
+  background: #e8f5ee;
+  color: #064e3b;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.approve-btn {
+  background: #087f5b;
+}
+
+.reject-btn {
+  background: #dc2626;
+}
+
+@media (max-width: 700px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: auto;
+  }
+
+  .admin-content {
+    padding: 18px;
+  }
+}

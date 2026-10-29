@@ -1,0 +1,147 @@
+
+.contact-page {
+  min-height: 100vh;
+  background: #f5faf7;
+  padding-bottom: 50px;
+}
+
+.contact-hero {
+  text-align: center;
+  padding: 65px 20px;
+  color: white;
+  background: linear-gradient(135deg, #087f5b, #12a878);
+}
+
+.contact-hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 45px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.contact-info,
+.contact-form-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contact-info h2,
+.contact-form-section h2 {
+  color: #087f5b;
+  margin-bottom: 20px;
+}
+
+.contact-info > p {
+  color: #5f6f66;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin: 25px 0;
+}
+
+.contact-item > span {
+  font-size: 25px;
+}
+
+.contact-item h3 {
+  margin: 0 0 8px;
+  color: #263b30;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #68766e;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.contact-form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-section label {
+  margin: 12px 0 7px;
+  color: #263b30;
+  font-weight: 600;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5e2d9;
+  border-radius: 7px;
+  font: inherit;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus {
+  border-color: #087f5b;
+  box-shadow: 0 0 0 3px rgba(8, 127, 91, 0.1);
+}
+
+.contact-form-section textarea {
+  resize: vertical;
+}
+
+.contact-form-section button {
+  margin-top: 20px;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+  background: #087f5b;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form-section button:hover {
+  background: #066849;
+}
+
+.contact-success {
+  margin-top: 15px;
+  color: #087f5b;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    margin-top: 25px;
+  }
+
+  .contact-hero h1 {
+    font-size: 30px;
+  }
+
+  .contact-info,
+  .contact-form-section {
+    padding: 22px;
+  }
+}

@@ -1,0 +1,158 @@
+
+.footer {
+  background: #073f30;
+  color: #ffffff;
+  padding: 50px 7% 0;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
+  gap: 35px;
+  padding-bottom: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-logo span:last-child {
+  color: #29d69b;
+}
+
+.footer-logo-icon {
+  color: #29d69b;
+  font-size: 32px;
+}
+
+.footer-brand > p:first-of-type {
+  margin: 0;
+  color: #29d69b;
+  font-weight: 600;
+}
+
+.footer-description {
+  max-width: 300px;
+  color: #c8ddd5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.footer-section > a:not(.footer-logo) {
+  width: fit-content;
+  color: #c8ddd5;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-section > a:hover {
+  color: #29d69b;
+}
+
+.footer-follow-heading {
+  margin-top: 10px !important;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #518072;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.footer-socials a:hover {
+  background: #29d69b;
+  color: #073f30;
+  border-color: #29d69b;
+}
+
+.footer-bottom {
+  border-top: 1px solid #315f51;
+  min-height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  color: #c8ddd5;
+  font-size: 13px;
+  margin: 15px 0;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-legal a {
+  color: #c8ddd5;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-legal a:hover {
+  color: #29d69b;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 35px 20px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    padding: 12px 0;
+    align-items: flex-start;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 15px;
+  }
+}

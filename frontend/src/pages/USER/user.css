@@ -1,0 +1,291 @@
+/* =========================
+   AUTHENTICATION PAGES
+========================= */
+
+.auth-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #f5faf7;
+}
+
+.auth-card,
+.profile-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e4eee8;
+  border-radius: 14px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+}
+
+.auth-card h2,
+.profile-card h2,
+.profile-info h2,
+.donation-history h2 {
+  color: #075b43;
+  margin-top: 0;
+}
+
+.auth-card > p,
+.profile-card > p,
+.donation-history > p {
+  color: #64746c;
+  line-height: 1.6;
+}
+
+.auth-card label,
+.profile-card label {
+  display: block;
+  margin: 16px 0 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #263a35;
+}
+
+.auth-card input,
+.profile-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d8e4dd;
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-card input:focus,
+.profile-card input:focus {
+  outline: none;
+  border-color: #08a574;
+  box-shadow: 0 0 0 3px rgba(8, 165, 116, 0.12);
+}
+
+.auth-card button,
+.profile-card button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+  background: #08a574;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.auth-card button:hover,
+.profile-card button:hover {
+  background: #067d59;
+}
+
+.auth-card button:disabled,
+.profile-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.auth-card a,
+.history-link {
+  color: #07845d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-card a:hover,
+.history-link:hover {
+  text-decoration: underline;
+}
+
+.auth-message {
+  color: #b42318;
+  font-size: 14px;
+  margin-top: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.page-message {
+  padding: 40px;
+  text-align: center;
+  color: #075b43;
+}
+
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-page {
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 45px 20px;
+  background: #f5faf7;
+  box-sizing: border-box;
+}
+
+/* User information card */
+
+.profile-info {
+  width: 100%;
+  max-width: 380px;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #dce9e2;
+  border-radius: 14px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.profile-info h2 {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e5eee8;
+}
+
+.profile-info p {
+  margin: 0;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf2ee;
+  color: #47574f;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.profile-info p:last-child {
+  border-bottom: none;
+}
+
+.profile-info strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #075b43;
+  font-size: 13px;
+}
+
+/* Edit profile card */
+
+.profile-card {
+  max-width: 480px;
+}
+
+.profile-card h2 {
+  margin-bottom: 10px;
+}
+
+.profile-card form {
+  margin-top: 20px;
+}
+
+.history-link {
+  display: inline-block;
+  margin-top: 22px;
+  line-height: 1.5;
+}
+
+/* =========================
+   DONATION HISTORY
+========================= */
+
+.donation-history {
+  min-height: 60vh;
+  padding: 40px 5%;
+  background: #f8fbf9;
+  box-sizing: border-box;
+}
+
+.donation-table-wrapper {
+  overflow-x: auto;
+  margin: 25px 0;
+  background: #fff;
+  border: 1px solid #e5eee8;
+  border-radius: 10px;
+}
+
+.donation-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.donation-table th,
+.donation-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e5eee8;
+  white-space: nowrap;
+}
+
+.donation-table th {
+  background: #eaf7f0;
+  color: #075b43;
+  font-size: 14px;
+}
+
+.donation-table td {
+  color: #47574f;
+  font-size: 14px;
+}
+
+.donation-table tbody tr:hover {
+  background: #f8fbf9;
+}
+
+.empty-donations {
+  margin-top: 25px;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e5eee8;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.empty-donations h3 {
+  color: #075b43;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 850px) {
+  .profile-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-info,
+  .profile-card {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-page,
+  .profile-page {
+    padding: 25px 15px;
+  }
+
+  .auth-card,
+  .profile-card,
+  .profile-info {
+    padding: 22px;
+  }
+
+  .donation-history {
+    padding: 30px 15px;
+  }
+
+  .donation-table th,
+  .donation-table td {
+    padding: 11px;
+  }
+}
