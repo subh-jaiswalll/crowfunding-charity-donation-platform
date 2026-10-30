@@ -72,15 +72,11 @@ function AllDonations() {
     });
 
     // Calculate successful donation amount on current page
-    const successfulAmount = donations.reduce((total, donation) => {
+  
 
-        if (donation.status?.toUpperCase() === "SUCCESS") {
-            return total + Number(donation.amount || 0);
-        }
-
-        return total;
-
-    }, 0);
+    const successfulAmount = donations
+  .filter((donation) => donation.status === "PAID")
+  .reduce((total, donation) => total + Number(donation.amount), 0);
 
     return (
         <div className="admin-donations">
