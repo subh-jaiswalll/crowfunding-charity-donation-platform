@@ -123,7 +123,7 @@ function AllDonations() {
                     onChange={(e) => setStatus(e.target.value)}
                 >
                     <option value="ALL">All Status</option>
-                    <option value="SUCCESS">Success</option>
+                    <option value="PAID">Success</option>
                     <option value="PENDING">Pending</option>
                     <option value="FAILED">Failed</option>
                 </select>
