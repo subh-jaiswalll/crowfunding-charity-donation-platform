@@ -3,18 +3,42 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
-                echo 'Pulling CrowFunding project from GitHub'
+                echo 'Code downloaded from GitHub'
             }
         }
 
-        stage('Verify Project') {
+        stage('Backend Installation') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
-                echo 'CrowFunding source code is available!'
+                dir('backend') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Frontend Installation') {
+            steps {
+                dir('frontend') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Frontend Build') {
+            steps {
+                dir('frontend') {
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Deployment') {
+            steps {
+                echo 'Build completed. Ready for deployment.'
             }
         }
     }
 }
+
