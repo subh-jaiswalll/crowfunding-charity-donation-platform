@@ -128,12 +128,7 @@ function CharityDetails() {
               Donate Now
             </Link>
 
-            <Link
-              to={`/charity/${charity.id}/impact-reports`}
-              className="details-impact-button"
-            >
-              View Impact Reports
-            </Link>
+            
           </div>
         </div>
       </article>
