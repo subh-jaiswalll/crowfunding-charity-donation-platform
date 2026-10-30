@@ -20,6 +20,15 @@ app.use(helmet())
 app.use(compression());
 
 
+Donation.belongsTo(User, {
+  foreignKey: "userId",
+  as: "donor"
+});
+
+Donation.belongsTo(NGO, {
+  foreignKey: "ngoId",
+  as: "ngo"
+});
 app.use("/email", require("./routes/emailRoutes"));
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
