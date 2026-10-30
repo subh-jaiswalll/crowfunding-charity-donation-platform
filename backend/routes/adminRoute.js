@@ -9,6 +9,7 @@ const {
   getAllCharities,
   updateCharityStatus,
   deleteUser,
+  getAllDonations
 } = require("../controllers/adminController");
 
 // Get all users
@@ -23,6 +24,14 @@ router.patch(
   authMiddleware,
   requireAdmin,
   updateCharityStatus,
+);
+
+router.get(
+    "/charities",
+    authMiddleware,
+    requireAdmin,
+    getAllDonations
+    
 );
 
 // Delete a user

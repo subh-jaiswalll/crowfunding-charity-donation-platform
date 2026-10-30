@@ -135,9 +135,58 @@ const deleteUser = async (req, res) => {
   }
 };
 
+const getAllDonations = async (req, res) => {
+    try {
+        // Pagination
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+        const offset = (page - 1) * limit;
+
+        // Fetch donations with donor and NGO
+        const { count, rows } = await Donation.findAndCountAll({
+            include: [
+                {
+                    model: User,
+                    as: "donor",
+                    attributes: ["id", "name", "email", "phone"]
+                },
+                {
+                    model: NGO,
+                    as: "ngo",
+                    attributes: ["id", "name", "category", "city"]
+                }
+            ],
+            limit,
+            offset,
+            order: [["createdAt", "DESC"]]
+        });
+
+        return res.status(200).json({
+            success: true,
+            message: "All donations fetched successfully",
+
+            totalDonations: count,
+            currentPage: page,
+            totalPages: Math.ceil(count / limit),
+
+            donations: rows
+        });
+
+    } catch (error) {
+        console.error("Get All Donations Error:", error);
+
+        return res.status(500).json({
+            success: false,
+            message: "Unable to fetch donations",
+            error: error.message
+        });
+    }
+};
+
 module.exports = {
   getAllUsers,
   getAllCharities,
   updateCharityStatus,
   deleteUser,
+  getAllDonations
 };

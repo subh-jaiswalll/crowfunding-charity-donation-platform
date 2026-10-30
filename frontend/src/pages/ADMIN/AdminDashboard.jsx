@@ -2,6 +2,7 @@
 import { useState } from "react";
 import AdminUsers from "./AdminUsers";
 import AdminCharities from "./AdminCharities";
+import AllDonations from "./AllDonations";
 import "./Admin.css";
 
 function AdminDashboard() {
@@ -9,6 +10,7 @@ function AdminDashboard() {
 
   return (
     <div className="admin-layout">
+
       <aside className="admin-sidebar">
         <h2>Admin Panel</h2>
 
@@ -25,14 +27,26 @@ function AdminDashboard() {
         >
           Manage Users
         </button>
+
+        <button
+          className={activeTab === "donations" ? "active" : ""}
+          onClick={() => setActiveTab("donations")}
+        >
+          All Donations
+        </button>
+
       </aside>
 
       <main className="admin-content">
         <h1>Admin Dashboard</h1>
-        <p>Manage users and review charity registrations.</p>
+        <p>Manage users, charities and donations.</p>
 
         {activeTab === "charities" && <AdminCharities />}
+
         {activeTab === "users" && <AdminUsers />}
+
+        {activeTab === "donations" && <AllDonations />}
+
       </main>
     </div>
   );
