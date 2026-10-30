@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const logger = require("./middlewares/logger");
 const compression = require("compression");
+const helmet = require("helmet");
 const app = express();
 const path = require("path");
 const sequelize = require("./utils/db.js");
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger);
+app.use(helmet())
 app.use(compression());
 
 
