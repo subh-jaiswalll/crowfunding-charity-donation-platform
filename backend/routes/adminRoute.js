@@ -27,11 +27,10 @@ router.patch(
 );
 
 router.get(
-    "/charities",
+    "/donations",
     authMiddleware,
     requireAdmin,
     getAllDonations
-    
 );
 
 // Delete a user

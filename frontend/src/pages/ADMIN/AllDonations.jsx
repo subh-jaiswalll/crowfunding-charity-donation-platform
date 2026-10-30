@@ -25,7 +25,7 @@ function AllDonations() {
             const token = localStorage.getItem("token");
 
             const response = await api.get(
-                `/admin/charities?page=${page}&limit=10`,
+                `/admin/donations?page=${page}&limit=10`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
